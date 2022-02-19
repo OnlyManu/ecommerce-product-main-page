@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/favicon-32x32.png">
+        <link rel="stylesheet" href="assets/style.css">
+        
+        <title>Frontend Mentor | E-commerce product page</title>
+
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution { font-size: 11px; text-align: center; }
+            .attribution a { color: hsl(228, 45%, 44%); }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="nav-links">
+                    <img src="assets/imgs/icon-menu.svg" class="icon-button" alt="button menu">
+                    <div class="logo">
+                        <img src="assets/imgs/logo.svg" alt="logo">
+                    </div>
+                    <nav>
+                        <img src="assets/imgs/icon-close.svg" class="icon-button" alt="button close">
+                        <ul>
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="administration">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <img src="assets/imgs/icon-cart.svg" class="icon-button" alt="cart button">
+                            <span class="badge">3</span>
+                        </div>
+                        <div class="cart-info">
+                            <div class="header">Cart</div>
+                            <div class="article-list">
+                                <div class="article">
+                                    <div class="article-info">
+                                        <img src="assets/imgs/image-product-1-thumbnail.jpg" alt="article overview">
+                                        <div class="article-name">
+                                            name
+                                        </div>
+                                        <div class="article-price">
+                                            <span class="quantity"></span>
+                                            <span class="price"></span>
+                                        </div>
+                                    </div>
+                                    <img src="assets/imgs/icon-delete.svg" class="list-button" alt="delete article">
+                                </div>
+                                <button class="action-button">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <img src="assets/imgs/image-avatar.png" alt="profile picture">
+                    </div>
+                </div>
+            </header>
+    
+            <main>
+                <div class="sneakers-carousel">
+                    <div class="carousel-image">
+                        <span><img src="assets/imgs/icon-next.svg" class="carousel-control" alt="next overview"></span>
+                        <img src="assets/imgs/image-product-1.jpg" alt="">
+                        <span><img src="assets/imgs/icon-previous.svg" class="carousel-control" alt="previous overview"></span>
+                    </div>
+                    <div class="carousel-slots">
+                        <img src="assets/imgs/image-product-1-thumbnail.jpg" class="slot" alt="overview 01">
+                        <img src="assets/imgs/image-product-2-thumbnail.jpg" class="slot" alt="overview 02">
+                        <img src="assets/imgs/image-product-3-thumbnail.jpg" class="slot" alt="overview 03">
+                        <img src="assets/imgs/image-product-4-thumbnail.jpg" class="slot" alt="overview 04">
+                    </div>
+                </div>
+                <div class="sneakers-description">
+                    <div class="description">
+                        <span class="company-name">SNEAKER COMPANY</span>        
+                        <h1>Fall Limited Edition Sneakers</h1>
+                        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                    </div>
+                    <div class="order">
+                        <div class="price">
+                            <div class="price-including-reduct">$125.00<span class="reduction">50%</span></div>
+                            <div class="price-without-reduct">$250.00</div>
+                        </div>
+                        <div class="order-options">
+                            <img src="assets/imgs/icon-minus.svg" alt="">0<img src="assets/imgs/icon-plus.svg" alt="">
+                        </div>
+                        <button class="action-button">Add to cart<span><img src="assets/imgs/icon-cart.svg"></span></button>
+                    </div>
+                </div>
+                
+            </main>
+            <footer>
+                <div class="attribution">
+                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                    Coded by <a href="https://github.com/OnlyManu">Only Manu</a>.
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

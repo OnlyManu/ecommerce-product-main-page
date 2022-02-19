@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url("font/KumbhSans-VariableFont_wght.ttf");
+}
+html, body{
+    box-sizing: border-box;
+}
+body{
+    /* primary colors */
+    --color-orange: hsl(26, 100%, 55%);
+    --color-pale-orange: hsl(25, 100%, 94%);
+
+    /* secondary colors */
+    --color-very-vark-blue: hsl(220, 13%, 13%);
+    --color-dark-grayish-blue: hsl(219, 9%, 45%);
+    --color-grayish-blue: hsl(220, 14%, 75%);
+    --color-light-grayish-blue: hsl(223, 64%, 98%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-black-lightbox: hsla(0, 0%, 0%, 75%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Kumbh Sans';
+    align-items: center;
+    background-color: var(--color-white);
+    font-size: 16px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    padding: 15px 0px;
+}
+
+header ul{
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+}
+
+main{
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: space-around;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 4%;
+}
+
+@media screen and (max-width: 1440px) {
+    .container{
+        max-width: 985px;
+    }
+    main{
+        grid-template-columns: 40% 40%;
+    }
+}
+@media screen and (max-width: 375px){
+    .container{
+        width: 95%;
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+}
