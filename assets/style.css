@@ -25,31 +25,70 @@ body{
     align-items: center;
     background-color: var(--color-white);
     font-size: 16px;
+    margin: 0;
 }
 
 .container{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.lightbox{
+    display: none;
 }
 
 header{
-    padding: 15px 0px;
+    padding: 20px 0px;
 }
-
-header ul{
+nav ul{
     list-style: none;
+    padding: 0;
 }
-header a{
+ul a{
     text-decoration: none;
 }
-
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.administration{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+}
+.navbar-icon{
+    height: 22px;
+    width: auto;
+}
+.cart-icon{
+    position: relative;
+    max-width: fit-content;
+}
+.badge{
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    font-size: 0.8em;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border-radius: 8px ;
+    padding: 0px 6px;
+}
 main{
     display: grid;
     grid-template-rows: auto;
     justify-content: space-around;
+    height: 80%;
 }
 
-img{
+main img{
     max-width: 100%;
     height: auto;
     border-radius: 4%;
@@ -65,9 +104,53 @@ img{
 }
 @media screen and (max-width: 375px){
     .container{
-        width: 95%;
+        width: 100%;
+    }
+    .lightbox{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-black-lightbox);
+        z-index: 2;
     }
     main{
         grid-template-columns: 1fr;
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 5vh;
+        width: 85%;
+    }
+    nav{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 55vw;
+        gap: 30px;
+        padding: 20px 20px;
+        background-color: var(--color-white);
+        z-index: 3;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    ul a{
+        color: var(--color-very-vark-blue);
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    .cart-info{
+        display: none;
     }
 }
