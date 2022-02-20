@@ -78,7 +78,7 @@ ul a{
     font-size: 0.8em;
     background-color: var(--color-orange);
     color: var(--color-white);
-    border-radius: 8px ;
+    border-radius: 45%;
     padding: 0px 6px;
 }
 main{
@@ -124,7 +124,7 @@ main img{
         flex-direction: row;
         justify-content: space-between;
         height: 5vh;
-        width: 85%;
+        width: 90%;
     }
     nav{
         display: none;
@@ -149,6 +149,10 @@ main img{
         color: var(--color-very-vark-blue);
         font-size: 1.2em;
         font-weight: 700;
+    }
+    .administration .navbar-icon{
+        width: 25px;
+        height: auto;
     }
     .cart-info{
         display: none;
