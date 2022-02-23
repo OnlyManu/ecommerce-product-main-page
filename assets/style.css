@@ -118,6 +118,9 @@ ul a{
     border-radius: 45%;
     padding: 0px 6px;
 }
+.cart-info{
+    display: none;
+}
 main{
     display: grid;
     grid-template-rows: auto;
@@ -134,6 +137,7 @@ main img{
     height: 100%;
 }
 .carousel img{
+    position: absolute;
     visibility: hidden;
 }
 .shown{
@@ -192,7 +196,42 @@ main img{
 
 @media screen and (max-width: 1440px) {
     .container{
-        max-width: 985px;
+        max-width: 84vw;
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 8vh;
+        width: 100%;
+        border-bottom: 1px solid var(--color-grayish-blue);
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: row;
+        gap: 1.8rem;
+    }
+    .nav-links>img{
+        display: none;
+    }
+    nav img{
+        display: none;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        gap: 1.4rem;
+    }
+    .administration{
+        gap: 35px;
+    }
+    .administration .navbar-icon{
+        width: 25px;
+        height: auto;
+    }
+    .profile img{
+        width: 40px !important;
+        height: auto;
     }
     main{
         grid-template-columns: 40% 40%;
@@ -252,9 +291,6 @@ main img{
         width: 25px;
         height: auto;
     }
-    .cart-info{
-        display: none;
-    }
     .sneakers-carousel{
         position: relative;
         overflow: hidden;
@@ -290,7 +326,6 @@ main img{
         left: 16px;
     }
     .carousel img{
-        position: absolute;
         top: 50%;
         transform: translateY(-50%);
     }
