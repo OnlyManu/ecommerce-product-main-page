@@ -42,7 +42,7 @@ h1, p{
 }
 .text-normal{
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--color-dark-grayish-blue);
 }
 .reduction{
@@ -57,8 +57,11 @@ h1, p{
 }
 .company-name{
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--color-orange);
+}
+.price-without-reduct{
+    text-decoration: line-through;
 }
 
 .container{
@@ -119,7 +122,6 @@ main{
     display: grid;
     grid-template-rows: auto;
     justify-content: space-around;
-    height: 100%;
 }
 
 main img{
@@ -144,9 +146,18 @@ main img{
 
 }
 .order-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
     background-color: var(--color-light-grayish-blue);
-    height: 2.5rem;
     border: none;
+}
+.order-options span{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-very-vark-blue);
 }
 .price{
     display: flex;
@@ -160,19 +171,22 @@ main img{
     align-items: stretch;
 }
 .action-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-weight: 700;
-    vertical-align: middle;
-    text-align: center;
-    height: 2.5rem;
     color: var(--color-white);
     background-color: var(--color-orange);
     border: none;
 }
 .action-button, .order-options{
     border-radius: 0.6rem;
+    height: 3rem;
 }
 .action-button img{
-    height: 1em;
+    height: 1rem;
+    margin-right: 0.8rem;
     width: auto;
 }
 
@@ -200,14 +214,15 @@ main img{
     }
     main{
         grid-template-columns: 1fr;
-        grid-template-rows: 40% 60%;
+        grid-template-rows: auto;
+        padding-bottom: 2rem;
     }
     header{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         height: 4vh;
-        width: 90%;
+        width: 88%;
     }
     nav{
         display: none;
@@ -244,7 +259,7 @@ main img{
         position: relative;
         overflow: hidden;
         justify-self: stretch;
-        height: 100%;
+        height: 37vh;
         width: 100%;
     }
     .carousel{
@@ -255,7 +270,7 @@ main img{
         display: flex;
         justify-content: center;
         position: absolute;
-        padding: 12px 15px;
+        padding: 10px 13px;
         width: fit-content;
         height: auto;
         background-color: var(--color-white);
@@ -265,14 +280,14 @@ main img{
         z-index: 4;
     }
     .carousel-control img{
-        width: 12px;
-        height: 16px;
+        width: 10px;
+        height: auto;
     }
     .carousel-control.next{
-        right: 20px;
+        right: 16px;
     }
     .carousel-control.previous{
-        left: 20px;
+        left: 16px;
     }
     .carousel img{
         position: absolute;
@@ -286,7 +301,7 @@ main img{
         display: grid;
         grid-template-rows: auto 1fr;
         height: 1fr;
-        width: 90%;
+        width: 88%;
         justify-self: center;
     }
     .description{
