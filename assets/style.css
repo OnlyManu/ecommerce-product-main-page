@@ -272,8 +272,9 @@ main img{
         flex-direction: column;
         gap: 1.8rem;
     }
-    .sneakers-carousel .carousel img{
+    .carousel{
         border-radius: 1.6rem;
+        overflow: hidden;
     }
     .carousel img{
         visibility: visible;
