@@ -76,12 +76,20 @@ h1, p{
     padding: 0;
 }
 .lightbox{
+    z-index: 2;
+}
+.lightbox.hide{
     display: none;
 }
-
+.lightbox.show{
+    display: block;
+}
 header{
     width: fit-content;
     padding: 20px 0px;
+}
+nav{
+    z-index: 3;
 }
 nav ul{
     list-style: none;
@@ -271,7 +279,7 @@ main img{
         visibility: visible;
         display: none;
     }
-    .shown{
+    .carousel img.show{
         display: block !important;
         position: relative !important;
     }
@@ -377,6 +385,9 @@ main img{
         background-color: var(--color-white);
         z-index: 3;
     }
+    nav.menu-mobile{
+        display: flex;
+    }
     nav ul{
         display: flex;
         flex-direction: column;
@@ -413,13 +424,13 @@ main img{
         border-radius: 50%;
         top: 50%;
         transform: translateY(-50%);
-        z-index: 4;
+        z-index: 1;
     }
     .carousel img{
         position: absolute;
         visibility: hidden;
     }
-    .shown{
+    .carousel img.show{
         visibility: visible !important;
     }
     .carousel-control img{

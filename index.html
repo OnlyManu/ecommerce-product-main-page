@@ -17,15 +17,15 @@
     </head>
     <body>
         <div class="container">
-            <div class="lightbox"></div>
+            <div class="lightbox hide" id="lightbox"></div>
             <header>
                 <div class="nav-links">
-                    <img src="assets/imgs/icon-menu.svg" class="navbar-icon icon-button" alt="button menu">
+                    <img src="assets/imgs/icon-menu.svg" class="navbar-icon icon-button" id="burger-menu" alt="button menu">
                     <div class="logo">
                         <img src="assets/imgs/logo.svg" class="navbar-icon" alt="logo">
                     </div>
-                    <nav>
-                        <img src="assets/imgs/icon-close.svg" class="icon-button" alt="button close">
+                    <nav id="navbar">
+                        <img src="assets/imgs/icon-close.svg" id="navbar-close" class="icon-button" alt="button close">
                         <ul>
                             <li><a href="#">Collections</a></li>
                             <li><a href="#">Men</a></li>
@@ -72,7 +72,7 @@
                     <span class="carousel-control previous"><img src="assets/imgs/icon-previous.svg" alt="previous overview"></span>
                     <span class="carousel-control next"><img src="assets/imgs/icon-next.svg" alt="next overview"></span>
                     <div class="carousel">
-                        <img src="assets/imgs/image-product-1.jpg" class="shown" alt="carousel-image">
+                        <img src="assets/imgs/image-product-1.jpg" class="show" alt="carousel-image">
                         <img src="assets/imgs/image-product-2.jpg" alt="carousel-image">
                         <img src="assets/imgs/image-product-3.jpg" alt="carousel-image">
                         <img src="assets/imgs/image-product-4.jpg" alt="carousel-image">
@@ -112,5 +112,6 @@
                 </div>
             </footer>
         </div>
+        <script lang="javascript" src="assets/app.js"></script>
     </body>
 </html>
