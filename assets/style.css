@@ -29,6 +29,9 @@ body{
     font-size: 16px;
     margin: 0;
 }
+body.lightbox-visible{
+    overflow-y: hidden;
+}
 footer{
     display: none;
 }

@@ -1,3 +1,4 @@
+const body = document.getElementsByTagName('body');
 const burgerMenu = document.getElementById('burger-menu');
 const Lightbox = document.getElementById('lightbox');
 const navbar = document.getElementById('navbar');
@@ -26,10 +27,12 @@ carouselControls.forEach((el) => {
  
 
 function showSideMenu(){
+    body[0].classList.add('lightbox-visible');
     Lightbox.classList.add('show');
     navbar.classList.add('menu-mobile');
 }
 function hideSideMenu(){
+    body[0].classList.remove('lightbox-visible');
     Lightbox.classList.remove('show');
     navbar.classList.remove('menu-mobile');
 }
