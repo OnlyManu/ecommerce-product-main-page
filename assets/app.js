@@ -14,11 +14,11 @@ carousel.forEach((el) => {
     }
 });
 
-burgerMenu.addEventListener('click', showSideMenu);
-Lightbox.addEventListener('click', hideSideMenu);
-navbarClose.addEventListener('click', hideSideMenu);
+burgerMenu.addEventListener('click', showSideMenu, false);
+Lightbox.addEventListener('click', hideSideMenu, false);
+navbarClose.addEventListener('click', hideSideMenu, false);
 carouselControls.forEach((el) => {
-    if(el.classList.toggle){
+    if(el.classList.contains('next')){
         el.addEventListener('click', carouselImgNext);
     } else {
         el.addEventListener('click', carouselImgPrev);
@@ -51,7 +51,7 @@ function carouselImgPrev(){
     if(carouselPosition > 1){
         carouselPosition--;
     } else {
-        carouselPosition=carouselImgs.length
+        carouselPosition=carouselImgs.length;
     }
     carouselImgs.forEach((el) => {
         el.classList.remove('show');

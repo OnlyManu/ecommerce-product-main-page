@@ -100,7 +100,7 @@ nav ul{
 ul{
     margin: 0;
 }
-ul a{
+.link{
     text-decoration: none;
     color: var(--color-dark-grayish-blue);
 }
@@ -248,7 +248,6 @@ main img{
     }
     nav{
         height: 100%;
-        padding: 2px 0;
     }
     nav ul{
         height: 100%;
@@ -261,15 +260,26 @@ main img{
         display: flex;
         align-items: stretch;
     }
-    nav a{
+    .link{
         display: flex;
         align-items: center;
         padding: 2px 0;
+        position: relative;
     }
-    nav a:hover{
+    .link::after{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background-color: var(--color-orange);
+    }
+    .link:hover{
         font-size: 1rem;
         color: var(--color-very-vark-blue) !important;
-        border-bottom: 2px solid var(--color-orange);
+    }
+    .link:hover.link::after{
+        width: 100%;
     }
     
     .administration{
@@ -421,7 +431,7 @@ main img{
         flex-direction: column;
         gap: 15px;
     }
-    ul a{
+    .link{
         color: var(--color-very-vark-blue);
         font-size: 1.2em;
         font-weight: 700;
