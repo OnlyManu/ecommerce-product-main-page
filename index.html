@@ -17,7 +17,25 @@
     </head>
     <body>
         <div class="container">
-            <div class="lightbox hide" id="lightbox"></div>
+            <div class="lightbox hide" id="lightbox">
+                <div class="lightbox-carousel hide">
+                    <img src="assets/imgs/icon-close-white.svg" id="lightbox-close" class="icon-button" alt="button close">
+                    <div class="carousel" id="lightbox-carousel">
+                        <span class="carousel-control previous"><img src="assets/imgs/icon-previous.svg" class="control" alt="previous overview"></span>
+                        <span class="carousel-control next"><img src="assets/imgs/icon-next.svg" class="control" alt="next overview"></span>
+                        <img src="assets/imgs/image-product-1.jpg" class="show" alt="carousel-image">
+                        <img src="assets/imgs/image-product-2.jpg" alt="carousel-image">
+                        <img src="assets/imgs/image-product-3.jpg" alt="carousel-image">
+                        <img src="assets/imgs/image-product-4.jpg" alt="carousel-image">
+                    </div>
+                    <div class="carousel-slots">
+                        <button class="lightbox-slot show" indice="1"><img src="assets/imgs/image-product-1-thumbnail.jpg" alt="overview 01"></button>
+                        <button class="lightbox-slot" indice="2"><img src="assets/imgs/image-product-2-thumbnail.jpg" alt="overview 02"></button>
+                        <button class="lightbox-slot" indice="3"><img src="assets/imgs/image-product-3-thumbnail.jpg" alt="overview 03"></button>
+                        <button class="lightbox-slot" indice="4"><img src="assets/imgs/image-product-4-thumbnail.jpg" alt="overview 04"></button>
+                    </div>
+                </div>
+            </div>
             <header>
                 <div class="nav-links">
                     <img src="assets/imgs/icon-menu.svg" class="navbar-icon icon-button" id="burger-menu" alt="button menu">
@@ -78,10 +96,10 @@
                         <img src="assets/imgs/image-product-4.jpg" alt="carousel-image">
                     </div>
                     <div class="carousel-slots">
-                        <img src="assets/imgs/image-product-1-thumbnail.jpg" class="slot" alt="overview 01">
-                        <img src="assets/imgs/image-product-2-thumbnail.jpg" class="slot" alt="overview 02">
-                        <img src="assets/imgs/image-product-3-thumbnail.jpg" class="slot" alt="overview 03">
-                        <img src="assets/imgs/image-product-4-thumbnail.jpg" class="slot" alt="overview 04">
+                        <button class="slot show" indice="1"><img src="assets/imgs/image-product-1-thumbnail.jpg" alt="overview 01"></button>
+                        <button class="slot" indice="2"><img src="assets/imgs/image-product-2-thumbnail.jpg" alt="overview 02"></button>
+                        <button class="slot" indice="3"><img src="assets/imgs/image-product-3-thumbnail.jpg" alt="overview 03"></button>
+                        <button class="slot" indice="4"><img src="assets/imgs/image-product-4-thumbnail.jpg" alt="overview 04"></button>
                     </div>
                 </div>
                 <div class="sneakers-description">
