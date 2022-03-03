@@ -2,7 +2,7 @@ const body = document.getElementsByTagName('body');
 const burgerMenu = document.getElementById('burger-menu');
 const lightbox = document.getElementById('lightbox');
 const lightboxCarousel = document.getElementById('lightbox-carousel')
-const lightboxCarouselClose = document.querySelector('.lightbox-carousel .icon-button');
+const lightboxCarouselClose = document.getElementById('lightbox-close');
 const lightboxCarouselControls = document.querySelectorAll('.lightbox-carousel .carousel-control');
 const lightboxCarouselSlots = document.querySelectorAll('.lightbox-slot');
 const navbar = document.getElementById('navbar');
@@ -10,27 +10,12 @@ const navbarClose = document.getElementById('navbar-close');
 const carousel = document.getElementById('carousel');
 const carouselControls = document.querySelectorAll('.sneakers-carousel .carousel-control');
 const carouselSlots = document.querySelectorAll('.slot');
-const CONTROLSIMGS = {
-    next: {
-        out: 'assets/imgs/icon-next.svg',
-        over: 'assets/imgs/icon-next-orange.svg'
-    },
-    previous: {
-        out: 'assets/imgs/icon-previous.svg',
-        over: 'assets/imgs/icon-previous-orange.svg'
-    }
-};
-const CLOSEIMGS = {
-    out: 'assets/imgs/icon-close-white.svg',
-    over: 'assets/imgs/icon-close-orange.svg'
-};
 let carouselPosition = 1;
 let lightboxCarouselPosition = 1;
 let carouselImgs = [];
 let lightboxCarouselImgs = []
 let lightboxCarouselControlsNext;
 let lightboxCarouselControlsPrevious;
-
 
 carousel.childNodes.forEach((el) => {
     if(el.nodeName.toLowerCase() == 'img'){
@@ -51,29 +36,10 @@ navbarClose.addEventListener('click', hideSideMenu, false);
 lightboxCarouselControls.forEach((el) => {
     if(el.classList.contains('next')){
         lightboxCarouselControlsNext = el.querySelector('.control');
-        el.addEventListener('mouseover', function(){
-            lightboxCarouselControlsNext.src = CONTROLSIMGS.next.over;
-        }, false);
-        el.addEventListener('mouseout', function(){
-            lightboxCarouselControlsNext.src = CONTROLSIMGS.next.out;
-        }, false);
     } else {
         lightboxCarouselControlsPrevious = el.querySelector('.control');
-        lightboxCarouselControlsNext = el.querySelector('.control');
-        el.addEventListener('mouseover', function(){
-            lightboxCarouselControlsPrevious.src = CONTROLSIMGS.previous.over;
-        }, false);
-        el.addEventListener('mouseout', function(){
-            lightboxCarouselControlsPrevious.src = CONTROLSIMGS.previous.out;
-        }, false);
     }
-})
-lightboxCarouselClose.addEventListener('mouseover', function(e){
-    e.target.src=CLOSEIMGS.over;
-}, false);
-lightboxCarouselClose.addEventListener('mouseout', function(e){
-    e.target.src=CLOSEIMGS.out;
-}, false);
+});
 carouselControls.forEach((el) => {
     if(el.classList.contains('next')){
         el.addEventListener('click', carouselImgNext);
@@ -120,7 +86,7 @@ function showSideMenu(){
     navbar.classList.add('menu-mobile');
 }
 function hideSideMenu(){
-    if(lightboxCarousel.classList.contains('hide')){
+    if(lightboxCarousel.parentNode.classList.contains('hide')){
         body[0].classList.remove('lightbox-visible');
         lightbox.classList.replace('show', 'hide');
         navbar.classList.remove('menu-mobile');
