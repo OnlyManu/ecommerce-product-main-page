@@ -56,27 +56,15 @@
                 </div>
                 <div class="administration">
                     <div class="cart">
-                        <div class="cart-icon">
+                        <div class="cart-icon" id="cart-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="navbar-icon icon-button" viewBox="0 0 22 20"><path class="animated-icon" d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg>
-                            <span class="badge">3</span>
+                            <span class="badge hide" id="badge">3</span>
                         </div>
-                        <div class="cart-info">
+                        <div class="cart-info hide" id="cart">
                             <div class="header">Cart</div>
-                            <div class="article-list">
-                                <div class="article-info">
-                                    <img src="assets/imgs/image-product-1-thumbnail.jpg" alt="article overview">
-                                    <div class="article-description">
-                                        <div class="article-name">
-                                            Fall Limited Edition Sneakers
-                                        </div>
-                                        <div class="article-price">
-                                            <span class="quantity">$125.00*3</span>
-                                            <span class="price">$375.00</span>
-                                        </div>
-                                    </div>
-                                    <img src="assets/imgs/icon-delete.svg" class="list-button" alt="delete article">
-                                </div>
-                                <button class="action-button">Checkout</button>
+                            <div class="article-list" id="article-list">
+                                <div class="empty">Your cart is empty.</div>
+                                <button class="action-button" id="checkout">Checkout</button>
                             </div>
                         </div>
                     </div>
@@ -116,20 +104,13 @@
                         </div>
                         <div class="order-buttons">
                             <div class="order-options">
-                                <img src="assets/imgs/icon-minus.svg" class="order-button" alt=""><span>0</span><img src="assets/imgs/icon-plus.svg" class="order-button" alt="">
+                                <img src="assets/imgs/icon-minus.svg" class="order-button" alt="" id="order-decrement"><span id="order-quantity">0</span><img src="assets/imgs/icon-plus.svg" class="order-button" alt="" id="order-increment">
                             </div>
-                            <button class="action-button"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20"><path class="icon" d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg></span>Add to cart</button>
+                            <button class="action-button" id="order-submit"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20"><path class="icon" d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg></span>Add to cart</button>
                         </div>
                     </div>
                 </div>
             </main>
-
-            <footer>
-                <div class="attribution">
-                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-                    Coded by <a href="https://github.com/OnlyManu">Only Manu</a>.
-                </div>
-            </footer>
         </div>
         <script lang="javascript" src="assets/app.js"></script>
     </body>
