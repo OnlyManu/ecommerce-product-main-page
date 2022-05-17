@@ -2,10 +2,7 @@
     font-family: "Kumbh Sans";
     src: url("font/KumbhSans-VariableFont_wght.ttf");
 }
-html, body{
-    box-sizing: border-box;
-}
-body{
+:root{
     /* primary colors */
     --color-orange: hsl(26, 100%, 55%);
     --color-pale-orange: hsl(25, 100%, 94%);
@@ -21,6 +18,14 @@ body{
     --color-black-lightbox: hsla(0, 0%, 0%, 75%);
     --color-black: hsl(0, 0%, 0%, 75%);
 
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+body{
     display: flex;
     flex-direction: column;
     font-family: 'Kumbh Sans';
@@ -138,9 +143,6 @@ ul{
     position: relative;
     display: flex;
 }
-.cart-icon .navbar-icon:hover .animated-icon{
-    fill: var(--color-very-vark-blue);
-}
 .cart-icon .badge{
     display: block;
     position: absolute;
@@ -159,24 +161,21 @@ ul{
 .cart-icon .badge.hide{
     display: none;
 }
-.cart-info.hide{
+.cart-info{
     display: none;
+    position: absolute;
 }
-.cart-info.show{
+.cart-wrapper{
     display: grid;
     grid-template-rows: 25% 1fr;
-    position: absolute;
     width: 365px;
     height: 255px;
-    bottom:  0;
-    left: 50%;
-    transform: translateX(-50%) translateY(114%);
-    background-color: var(--color-white);
-    border-radius: 0.8rem;
     box-shadow: 0px 16px 36px hsla(0, 0%, 0%, 15%);
-    z-index: 1;
+    border-radius: 0.8rem;
+    background-color: var(--color-white);
+    margin-top: 2rem;
 }
-.cart-info .header{
+.cart-wrapper .header{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -442,13 +441,23 @@ button{
     .link:hover.link::after{
         width: 100%;
     }
-    
     .administration{
         gap: 3rem;
     }
     .administration .navbar-icon{
         width: 1.5rem;
         height: auto;
+    }
+    .cart:hover .navbar-icon .animated-icon{
+        fill: var(--color-very-vark-blue);
+    }
+    .cart:hover .cart-info{
+        display: flex;
+        bottom:  0;
+        left: 50%;
+        transform: translateX(-50%) translateY(100%);
+        background-color: transparent;
+        z-index: 1;
     }
     .profile{
         width: 3rem;
@@ -753,14 +762,24 @@ button{
     .cart{
         position: static;
     }
-    .cart-info.show{
-        right: 50%;
-        bottom: auto;
+    .cart-wrapper{
         width: 96vw;
         max-width: 360px;
-        top: 10vh;
-        transform: translateX(-50%);
-        z-index: 2;
+    }
+    .cart-info.hide{
+        display: none;
+    }
+    .cart-info.show{
+        display: flex;
+        right: 50%;
+        bottom: auto;
+        top: 1.2rem;
+        transform: translateX(50%);
+        z-index: 1000;
+        width: fit-content;
+    }
+    .cart-icon .animated-icon.hover{
+        fill: var(--color-very-vark-blue);
     }
     .sneakers-carousel{
         position: relative;
